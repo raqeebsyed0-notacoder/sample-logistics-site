@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Logistics KSA - Reliable Transport Solutions Across the Kingdom</title>
+    <meta name="description" content="Swift Logistics KSA offers freight forwarding, warehousing, and last-mile delivery across Saudi Arabia. Get a quote today!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        accent: '#60A5FA',
+                        dark: '#0F172A'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        [dir="rtl"] body { font-family: 'Tajawal', sans-serif; }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .hero-bg { background: linear-gradient(135deg, #1E40AF 0%, #0F172A 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(30, 64, 175, 0.2); }
+        .btn-pulse { animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.5); } 50% { box-shadow: 0 0 0 15px rgba(96, 165, 250, 0); } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Language Toggle -->
+    <button id="langToggle" onclick="toggleLanguage()" class="fixed top-4 right-4 z-50 bg-white shadow-lg px-4 py-2 rounded-full font-semibold text-primary hover:bg-primary hover:text-white transition-all">
+        <span id="langText">عربي</span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-truck-fast text-2xl text-primary"></i>
+                    <span class="font-bold text-xl text-primary" data-en="Swift Logistics" data-ar="سويفت لوجستكس">Swift Logistics</span>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#services" class="text-gray-600 hover:text-primary transition" data-en="Services" data-ar="خدماتنا">Services</a>
+                    <a href="#why-us" class="text-gray-600 hover:text-primary transition" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary transition" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+                    <a href="#contact" class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-accent transition font-medium" data-en="Get Quote" data-ar="احصل على عرض">Get Quote</a>
+                </div>
+                <button class="md:hidden text-primary" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t px-4 py-4 space-y-3">
+            <a href="#services" class="block text-gray-600" data-en="Services" data-ar="خدماتنا">Services</a>
+            <a href="#why-us" class="block text-gray-600" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
+            <a href="#contact" class="block text-gray-600" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white fade-in">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6" data-en="Swift Logistics KSA" data-ar="سويفت لوجستكس السعودية">Swift Logistics KSA</h1>
+                    <p class="text-xl sm:text-2xl text-blue-200 mb-8" data-en="Reliable Transport Solutions Across the Kingdom" data-ar="حلول نقل موثوقة في جميع أنحاء المملكة">Reliable Transport Solutions Across the Kingdom</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-accent text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-primary transition btn-pulse" data-en="Get a Quote" data-ar="احصل على عرض سعر">Get a Quote</a>
+                        <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-primary transition" data-en="Our Services" data-ar="خدماتنا">Our Services</a>
+                    </div>
+                </div>
+                <div class="hidden lg:flex justify-center fade-in">
+                    <div class="relative">
+                        <div class="w-80 h-80 bg-accent/20 rounded-full absolute -top-4 -left-4"></div>
+                        <div class="w-80 h-80 bg-white/10 rounded-full flex items-center justify-center backdrop-blur">
+                            <i class="fas fa-truck text-8xl text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold text-dark mb-4" data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-en="Comprehensive logistics solutions tailored to your business needs" data-ar="حلول لوجستية شاملة مصممة لتلبية احتياجات عملك">Comprehensive logistics solutions tailored to your business needs</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl card-hover fade-in">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-ship text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark" data-en="Freight Forwarding" data-ar="الشحن والتوصيل">Freight Forwarding</h3>
+                    <p class="text-gray-600" data-en="International and domestic freight services with real-time tracking. Air, sea, and land transport solutions for all cargo types." data-ar="خدمات الشحن الدولية والمحلية مع التتبع في الوقت الحقيقي. حلول النقل الجوي والبحري والبري لجميع أنواع البضائع.">International and domestic freight services with real-time tracking. Air, sea, and land transport solutions for all cargo types.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl card-hover fade-in">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-warehouse text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark" data-en="Warehousing & Distribution" data-ar="التخزين والتوزيع">Warehousing & Distribution</h3>
+                    <p class="text-gray-600" data-en="State-of-the-art warehousing facilities across KSA. Inventory management, order fulfillment, and distribution services." data-ar="مرافق تخزين حديثة في جميع أنحاء المملكة. إدارة المخزون وتنفيذ الطلبات وخدمات التوزيع.">State-of-the-art warehousing facilities across KSA. Inventory management, order fulfillment, and distribution services.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl card-hover fade-in">
+                    <div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-truck-fast text-3xl text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark" data-en="Last-Mile Delivery" data-ar="التوصيل للميل الأخير">Last-Mile Delivery</h3>
+                    <p class="text-gray-600" data-en="Fast and reliable last-mile delivery solutions. Same-day and next-day delivery options available across the Kingdom." data-ar="حلول توصيل سريعة وموثوقة للميل الأخير. خيارات التوصيل في نفس اليوم واليوم التالي متاحة في جميع أنحاء المملكة.">Fast and reliable last-mile delivery solutions. Same-day and next-day delivery options available across the Kingdom.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-20 bg-gradient-to-br from-primary to-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4" data-en="Why Choose Us" data-ar="لماذا تختارنا">Why Choose Us</h2>
+                <p class="text-blue-200 max-w-2xl mx-auto" data-en="Your trusted logistics partner in Saudi Arabia" data-ar="شريكك اللوجستي الموثوق في المملكة العربية السعودية">Your trusted logistics partner in Saudi Arabia</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center fade-in">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-award text-4xl text-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3" data-en="15+ Years Experience" data-ar="أكثر من 15 سنة خبرة">15+ Years Experience</h3>
+                    <p class="text-blue-200" data-en="Trusted by hundreds of businesses across the Kingdom with proven track record" data-ar="موثوق به من قبل مئات الشركات في جميع أنحاء المملكة مع سجل حافل">Trusted by hundreds of businesses across the Kingdom with proven track record</p>
+                </div>
+                <div class="text-center fade-in">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-headset text-4xl text-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3" data-en="24/7 Support" data-ar="دعم على مدار الساعة">24/7 Support</h3>
+                    <p class="text-blue-200" data-en="Round-the-clock customer service to assist you anytime, anywhere" data-ar="خدمة عملاء على مدار الساعة لمساعدتك في أي وقت وفي أي مكان">Round-the-clock customer service to assist you anytime, anywhere</p>
+                </div>
+                <div class="text-center fade-in">
+                    <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-halved text-4xl text-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3" data-en="Licensed & Insured" data-ar="مرخص ومؤمن">Licensed & Insured</h3>
+                    <p class="text-blue-200" data-en="Fully licensed and insured operations for your peace of mind" data-ar="عمليات مرخصة ومؤمنة بالكامل لراحة بالك">Fully licensed and insured operations for your peace of mind</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-dark mb-4" data-en="Get a Free Quote" data-ar="احصل على عرض سعر مجاني">Get a Free Quote</h2>
+                    <p class="text-gray-600 mb-8" data-en="Fill out the form and our team will get back to you within 24 hours" data-ar="املأ النموذج وسيتواصل معك فريقنا خلال 24 ساعة">Fill out the form and our team will get back to you within 24 hours</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4"><i class="fas fa-phone text-primary text-xl w-8"></i><span>+966 11 234 5678</span></div>
+                        <div class="flex items-center gap-4"><i class="fas fa-envelope text-primary text-xl w-8"></i><span>info@swiftlogistics.sa</span></div>
+                        <div class="flex items-center gap-4"><i class="fas fa-location-dot text-primary text-xl w-8"></i><span data-en="Riyadh, Saudi Arabia" data-ar="الرياض، المملكة العربية السعودية">Riyadh, Saudi Arabia</span></div>
+                    </div>
+                </div>
+                <form id="contactForm" class="bg-white p-8 rounded-2xl shadow-lg fade-in" onsubmit="return handleSubmit(event)">
+                    <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label>
+                            <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="+966...">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2" data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
+                        <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="email@example.com">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2" data-en="Service Needed" data-ar="الخدمة المطلوبة">Service Needed</label>
+                        <select id="service" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <option value="" data-en="Select a service" data-ar="اختر خدمة">Select a service</option>
+                            <option value="freight" data-en="Freight Forwarding" data-ar="الشحن والتوصيل">Freight Forwarding</option>
+                            <option value="warehouse" data-en="Warehousing & Distribution" data-ar="التخزين والتوزيع">Warehousing & Distribution</option>
+                            <option value="lastmile" data-en="Last-Mile Delivery" data-ar="التوصيل للميل الأخير">Last-Mile Delivery</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2" data-en="Message" data-ar="الرسالة">Message</label>
+                        <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Tell us about your requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-accent transition" data-en="Submit Request" data-ar="إرسال الطلب">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fas fa-truck-fast text-2xl text-accent"></i>
+                        <span class="font-bold text-xl" data-en="Swift Logistics" data-ar="سويفت لوجستكس">Swift Logistics</span>
+                    </div>
+                    <p class="text-gray-400" data-en="Your trusted logistics partner in Saudi Arabia since 2009." data-ar="شريكك اللوجستي الموثوق في السعودية منذ 2009.">Your trusted logistics partner in Saudi Arabia since 2009.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <a href="#services" class="block hover:text-accent" data-en="Services" data-ar="خدماتنا">Services</a>
+                        <a href="#why-us" class="block hover:text-accent" data-en="About Us" data-ar="من نحن">About Us</a>
+                        <a href="#contact" class="block hover:text-accent" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4" data-en="Contact Info" data-ar="معلومات التواصل">Contact Info</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fas fa-phone mr-2"></i>+966 11 234 5678</p>
+                        <p><i class="fas fa-envelope mr-2"></i>info@swiftlogistics.sa</p>
+                        <p><i class="fas fa-location-dot mr-2"></i><span data-en="Riyadh, KSA" data-ar="الرياض، السعودية">Riyadh, KSA</span></p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4" data-en="Follow Us" data-ar="تابعنا">Follow Us</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p data-en="© 2024 Swift Logistics KSA. All rights reserved." data-ar="© 2024 سويفت لوجستكس السعودية. جميع الحقوق محفوظة.">© 2024 Swift Logistics KSA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let isArabic = false;
+        function toggleLanguage() {
+            isArabic = !isArabic;
+            document.documentElement.lang = isArabic ? 'ar' : 'en';
+            document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+            document.getElementById('langText').textContent = isArabic ? 'English' : 'عربي';
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.textContent = isArabic ? el.dataset.ar : el.dataset.en;
+            });
+        }
+        function handleSubmit(e) {
+            e.preventDefault();
+            const form = document.getElementById('contactForm');
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value.trim();
+            if (!name || !email || !phone || !service || !message) {
+                alert(isArabic ? 'يرجى ملء جميع الحقول' : 'Please fill in all fields');
+                return false;
+            }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert(isArabic ? 'يرجى إدخال بريد إلكتروني صحيح' : 'Please enter a valid email');
+                return false;
+            }
+            alert(isArabic ? 'شكراً لك! سنتواصل معك قريباً.' : 'Thank you! We will contact you soon.');
+            form.reset();
+            return false;
+        }
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
